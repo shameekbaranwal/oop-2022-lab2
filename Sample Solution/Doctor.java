@@ -1,12 +1,18 @@
-class Doctor {
+public class Doctor {
 	String name;
+	int specialization;
 
-	Doctor(String name) {
+	Doctor(String name, int specialization) {
 		this.name = name;
+		this.specialization = specialization;
 	}
 
 	String getName() {
 		return this.name;
+	}
+
+	int getSpecialization() {
+		return this.specialization;
 	}
 
 	Disease differentialDiagnosis(Patient p, Disease[] d) {
@@ -18,8 +24,12 @@ class Doctor {
 			int score = 0;
 
 			for (int j = 0; j < patientSymptoms.length; j++) {
-				if (d[i].symptomsInclude(patientSymptoms[j]))
+//				System.out.println(patientSymptoms[i]);
+				if (d[i] != null && d[i].symptomsInclude(patientSymptoms[j])) {
 					score++;
+					System.out.println(d[i].getName());
+				}
+					
 			}
 
 			if (score > maxScore) {

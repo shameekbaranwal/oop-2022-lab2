@@ -1,4 +1,4 @@
-class Disease {
+public class Disease {
 	String name;
 	String treatment;
 	int communicability;
