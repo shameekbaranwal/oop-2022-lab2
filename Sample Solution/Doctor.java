@@ -17,19 +17,19 @@ public class Doctor {
 
 	Disease differentialDiagnosis(Patient p, Disease[] d) {
 		int maxScore = 0;
-		Disease maxMatchingDisease = null;
+		Disease maxMatchingDisease = d[0];
 		String[] patientSymptoms = p.getSymptoms();
 
 		for (int i = 0; i < d.length; i++) {
 			int score = 0;
 
 			for (int j = 0; j < patientSymptoms.length; j++) {
-//				System.out.println(patientSymptoms[i]);
+				// System.out.println(patientSymptoms[i]);
 				if (d[i] != null && d[i].symptomsInclude(patientSymptoms[j])) {
 					score++;
 					System.out.println(d[i].getName());
 				}
-					
+
 			}
 
 			if (score > maxScore) {
