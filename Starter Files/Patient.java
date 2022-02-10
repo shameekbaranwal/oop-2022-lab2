@@ -16,13 +16,13 @@ public class Patient {
 	}
 
 	/**
-	 * @return the category
+	 * @return the Symptoms
 	 */
 	String[] getSymptoms() {
 	}
 
 	/**
-	 * @return the disease category
+	 * @return the ID of the patient
 	 */
 	int getID() {
 	}
@@ -34,8 +34,9 @@ public class Patient {
 	}
 
 	/**
+	 * Set the disease of the patient
 	 * @param A disease object
-	 *          Set the disease of the patient
+	 *          
 	 */
 	void setDisease(Disease d) {
 	}
