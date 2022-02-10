@@ -140,9 +140,9 @@ public class SolutionTest extends TestCase {
 		princeton.diagnose(one);
 		princeton.diagnose(three);
 
-		assert (four.getDisease().getName() == commonCold.getName());
-		assert (one.getDisease().getName() == covid.getName());
-		assert (three.getDisease().getName() == stripe.getName());
+		assert (four.getDisease().getName().equals(commonCold.getName()));
+		assert (one.getDisease().getName().equals(covid.getName()));
+		assert (three.getDisease().getName().equals(stripe.getName()));
 
 	}
 
