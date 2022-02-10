@@ -1,3 +1,9 @@
+/**
+ * 
+ * The main Hospital Class. This is where all the patients and diseases are
+ * stored, and doctor objects are made.
+ *
+ */
 public class Hospital {
 	Patient[] patients;
 	int numPatients;
@@ -6,7 +12,7 @@ public class Hospital {
 	Doctor House;
 	Doctor Wilson;
 
-	/*
+	/**
 	 * Creates a new instance of Hospital
 	 */
 	public Hospital() {
@@ -16,55 +22,71 @@ public class Hospital {
 		Wilson = new Doctor("James Wilson", 2);
 	}
 
-	/*
-	 * @return all patients in the hospital.
+	/**
+	 * @return All patients in the hospital.
 	 */
 	public Patient[] getPatients() {
 		return this.patients;
 	}
-	
-	/*
-	 * @return numPatients
+
+	/**
+	 * @return Number of patients in the hospital.
 	 */
 	public int getNumPatients() {
 		return this.numPatients;
 	}
 
-	/*
-	 * @return numDiseases
+	/**
+	 * @return Number of diseases in the hospital's list.
 	 */
 	public int getNumDiseases() {
 		return this.numDiseases;
 	}
-	
-	
-	/*
-	 * @return all diseases in the list for diagnosis.
+
+	/**
+	 * @return All diseases in the list for diagnosis.
 	 */
 	public Disease[] getDiseases() {
 		return this.diseases;
 	}
 
-	/*
-	 * @param The name of the patient, the category of admittance and the list of
-	 * symptoms.
+	/**
+	 * @param name     The name of the patient,
+	 * @param category The category of admittance
+	 * @param symptoms The list of symptoms.
+	 * 
+	 *                 <br/>
+	 *                 Adds a patient to the current patient list,
+	 *                 and increments the number of patients
 	 */
 	public void addPatient(String name, int category, String[] symptoms) {
 		Patient p = new Patient(name, category, symptoms);
 		patients[numPatients++] = p;
 	}
 
-	/*
-	 * @param The name of the disease, the treatment and the communicability.
+	/**
+	 * @param name            The name of the disease.
+	 * @param treatment       The name of the treatment for the disease.
+	 * @param communicability An integer denoting how communicable the disease is.
+	 * @param symptoms        A list of Strings denoting the symptoms of the
+	 *                        disease.
+	 * 
+	 *                        <br/>
+	 *                        This function adds a new Disease into the Hospital's
+	 *                        list, and increments the number of diseases.
+	 * 
 	 */
 	public void addDisease(String name, String treatment, int communicability, String[] symptoms) {
 		Disease d = new Disease(name, treatment, communicability, symptoms);
 		diseases[numDiseases++] = d;
 	}
 
-	/*
-	 * @param A Patient object.
-	 * 
+	/**
+	 * @param p A Patient object.
+	 *          <br/>
+	 *          The diagnose function assigns a doctor to the patient and then
+	 *          returns what the diagnosed disease is.
+	 *          <br/>
 	 * @return The Disease object.
 	 */
 	public Disease diagnose(Patient p) {
@@ -83,10 +105,14 @@ public class Hospital {
 		return d;
 	}
 
-	/*
-	 * @param A Patient object.
+	/**
+	 * @param p - A Patient object.
 	 * 
-	 * @return The diagnosis.
+	 *          <br/>
+	 *          The function returns the treatment specified for the disease the
+	 *          patient is diagnosed with.
+	 *          <br/>
+	 * @return The Treatment for the disease.
 	 */
 	public String treatment(Patient p) {
 		if (p.hasBeenDiagnosed())

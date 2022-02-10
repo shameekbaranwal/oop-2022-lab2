@@ -1,21 +1,55 @@
+/**
+ * 
+ * The Doctor Class. This is the class that will be used to get the differential
+ * diagnosis
+ * for each patient. The diagnosed disease is used to then decide the treatment.
+ *
+ */
 public class Doctor {
+
 	String name;
 	int specialization;
 
-	Doctor(String name, int specialization) {
+	/**
+	 * 
+	 * @param name           The name of the doctor.
+	 * @param specialization The specialization of the doctor, 1 - House , 2 -
+	 *                       Wilson
+	 */
+	public Doctor(String name, int specialization) {
 		this.name = name;
 		this.specialization = specialization;
 	}
 
-	String getName() {
+	/**
+	 * @return the Name of the doctor object.
+	 */
+	public String getName() {
 		return this.name;
 	}
 
-	int getSpecialization() {
+	/**
+	 * 
+	 * @return The Specialization number of the doctor.
+	 */
+	public int getSpecialization() {
 		return this.specialization;
 	}
 
-	Disease differentialDiagnosis(Patient p, Disease[] d) {
+	/**
+	 * 
+	 * @param p - A patient object which is to be diagnosed
+	 * @param d - The list of diseases that could potentially be the diagnosis.
+	 *          <br/>
+	 *          This is the main diagnosis function. It takes in a patient and the
+	 *          list of diseases that the
+	 *          hospital object has, and determines the diagnostic report by
+	 *          checking the maximum matching symptoms with any
+	 *          disease.
+	 *          <br/>
+	 * @return A Disease object that is the diagnosed disease based on symptoms
+	 */
+	public Disease differentialDiagnosis(Patient p, Disease[] d) {
 		int maxScore = 0;
 		Disease maxMatchingDisease = d[0];
 		String[] patientSymptoms = p.getSymptoms();

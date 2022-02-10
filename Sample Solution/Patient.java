@@ -1,11 +1,23 @@
+/**
+ * 
+ * The Patient Class. This is where the symptoms are listed, and the patient is
+ * used in the doctor class to
+ * diagnose with the appropriate disease.
+ *
+ */
 public class Patient {
 	String name;
 	int category;
 	String[] symptoms;
 	Disease disease;
 
-	/** Creates a new instance of Patient */
-	Patient(String name, int category, String[] symptoms) {
+	/**
+	 * @param name     Name of the patient
+	 * @param category Category - 1 or 2 deciding which doctor will be assigned.
+	 * @param symptoms The list of symptoms.
+	 *                 Creates a new instance of Patient
+	 */
+	public Patient(String name, int category, String[] symptoms) {
 		this.name = name;
 		this.category = category;
 		this.symptoms = symptoms;
@@ -15,43 +27,43 @@ public class Patient {
 	/**
 	 * @return the name
 	 */
-	String getName() {
+	public String getName() {
 		return this.name;
 	}
 
 	/**
-	 * @return the category
+	 * @return the list of symptoms.
 	 */
-	String[] getSymptoms() {
+	public String[] getSymptoms() {
 		return this.symptoms.clone();
 	}
 
 	/**
 	 * @return the disease category
 	 */
-	int getCategory() {
+	public int getCategory() {
 		return this.category;
 	}
 
 	/**
 	 * @return the disease
 	 */
-	Disease getDisease() {
+	public Disease getDisease() {
 		return this.disease;
 	}
 
 	/**
-	 * @param A disease object
-	 *         Set the disease of the patient
+	 * @param d A disease object
+	 *          Set the disease of the patient
 	 */
-	void setDisease(Disease d) {
+	public void setDisease(Disease d) {
 		this.disease = d;
 	}
 
 	/**
 	 * @return true if the patient has been diagnosed
 	 */
-	boolean hasBeenDiagnosed() {
+	public boolean hasBeenDiagnosed() {
 		return (this.disease != null);
 	}
 
