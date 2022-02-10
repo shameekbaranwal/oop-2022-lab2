@@ -83,13 +83,15 @@ public class Hospital {
 
 	/**
 	 * @param p A Patient object.
-	 * 			<br/>
-	 * 			The assignDoctor function receives a patient object and checks if its ID field is even or odd.
-	 * 			If ID is odd, then it returns a reference to the "House", else it returns a reference to the "Wilson" object.
+	 *          <br/>
+	 *          The assignDoctor function receives a patient object and checks if
+	 *          its ID field is even or odd.
+	 *          If ID is odd, then it returns a reference to the "House", else it
+	 *          returns a reference to the "Wilson" object.
 	 * 
 	 * @return The assigned Doctor's object reference.
 	 */
-	
+
 	public Doctor assignDoctor(Patient p) {
 		if (p.getID() % 2 == 1)
 			return House;

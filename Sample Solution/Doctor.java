@@ -46,7 +46,6 @@ public class Doctor {
 			int score = 0;
 
 			for (int j = 0; j < patientSymptoms.length; j++) {
-				// System.out.println(patientSymptoms[i]);
 				if (d[i] != null && d[i].symptomsInclude(patientSymptoms[j])) {
 					score++;
 					System.out.println(d[i].getName());
