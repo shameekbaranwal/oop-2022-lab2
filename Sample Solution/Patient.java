@@ -7,19 +7,19 @@
  */
 public class Patient {
 	String name;
-	int category;
+	int ID;
 	String[] symptoms;
 	Disease disease;
 
 	/**
 	 * @param name     Name of the patient
-	 * @param category Category - 1 or 2 deciding which doctor will be assigned.
+	 * @param ID       for deciding which doctor will be assigned.
 	 * @param symptoms The list of symptoms.
 	 *                 Creates a new instance of Patient
 	 */
-	public Patient(String name, int category, String[] symptoms) {
+	public Patient(String name, int ID, String[] symptoms) {
 		this.name = name;
-		this.category = category;
+		this.ID = ID;
 		this.symptoms = symptoms;
 		this.disease = null;
 	}
@@ -39,10 +39,10 @@ public class Patient {
 	}
 
 	/**
-	 * @return the disease category
+	 * @return the disease ID
 	 */
-	public int getCategory() {
-		return this.category;
+	public int getID() {
+		return this.ID;
 	}
 
 	/**

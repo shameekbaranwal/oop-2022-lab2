@@ -1,6 +1,6 @@
 public class Patient {
 	String name;
-	int category;
+	int ID;
 	String[] symptoms;
 	Disease disease;
 
@@ -24,7 +24,7 @@ public class Patient {
 	/**
 	 * @return the disease category
 	 */
-	int getCategory() {
+	int getID() {
 	}
 
 	/**

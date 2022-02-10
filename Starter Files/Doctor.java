@@ -1,8 +1,7 @@
 public class Doctor {
 	String name;
-	int specialization;
 
-	Doctor(String name, int specialization) {
+	Doctor(String name) {
 	}
 
 	String getName() {

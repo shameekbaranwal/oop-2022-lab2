@@ -35,7 +35,7 @@ class Hospital {
 
 	}
 
-	Disease diagnose(Patient p) {
+	void diagnose(Patient p) {
 
 	}
 

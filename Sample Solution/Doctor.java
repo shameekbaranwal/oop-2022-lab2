@@ -8,17 +8,13 @@
 public class Doctor {
 
 	String name;
-	int specialization;
 
 	/**
 	 * 
-	 * @param name           The name of the doctor.
-	 * @param specialization The specialization of the doctor, 1 - House , 2 -
-	 *                       Wilson
+	 * @param name The name of the doctor.
 	 */
-	public Doctor(String name, int specialization) {
+	public Doctor(String name) {
 		this.name = name;
-		this.specialization = specialization;
 	}
 
 	/**
@@ -26,14 +22,6 @@ public class Doctor {
 	 */
 	public String getName() {
 		return this.name;
-	}
-
-	/**
-	 * 
-	 * @return The Specialization number of the doctor.
-	 */
-	public int getSpecialization() {
-		return this.specialization;
 	}
 
 	/**

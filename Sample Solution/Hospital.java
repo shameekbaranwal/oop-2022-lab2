@@ -18,8 +18,8 @@ public class Hospital {
 	public Hospital() {
 		patients = new Patient[10];
 		diseases = new Disease[10];
-		House = new Doctor("Gregory House", 1);
-		Wilson = new Doctor("James Wilson", 2);
+		House = new Doctor("Gregory House");
+		Wilson = new Doctor("James Wilson");
 	}
 
 	/**
@@ -83,26 +83,36 @@ public class Hospital {
 
 	/**
 	 * @param p A Patient object.
+	 * 			<br/>
+	 * 			The assignDoctor function receives a patient object and checks if its ID field is even or odd.
+	 * 			If ID is odd, then it returns a reference to the "House", else it returns a reference to the "Wilson" object.
+	 * 
+	 * @return The assigned Doctor's object reference.
+	 */
+	
+	public Doctor assignDoctor(Patient p) {
+		if (p.getID() % 2 == 1)
+			return House;
+
+		return Wilson;
+	}
+
+	/**
+	 * @param p A Patient object.
 	 *          <br/>
 	 *          The diagnose function assigns a doctor to the patient and then
 	 *          returns what the diagnosed disease is.
 	 *          <br/>
 	 * @return The Disease object.
 	 */
-	public Disease diagnose(Patient p) {
+	public void diagnose(Patient p) {
 		if (p.hasBeenDiagnosed())
-			return p.getDisease();
+			return;
 
-		Doctor assignedDoctor = null;
-
-		if (p.getCategory() == House.getSpecialization())
-			assignedDoctor = House;
-		else
-			assignedDoctor = Wilson;
+		Doctor assignedDoctor = this.assignDoctor(p);
 
 		Disease d = assignedDoctor.differentialDiagnosis(p, diseases);
 		p.disease = d;
-		return d;
 	}
 
 	/**
