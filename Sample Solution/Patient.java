@@ -12,10 +12,12 @@ public class Patient {
 	Disease disease;
 
 	/**
+	 * Constructor for the Patient class.
+	 * 
 	 * @param name     Name of the patient
 	 * @param ID       for deciding which doctor will be assigned.
 	 * @param symptoms The list of symptoms.
-	 *                 Creates a new instance of Patient
+	 * 
 	 */
 	public Patient(String name, int ID, String[] symptoms) {
 		this.name = name;
@@ -25,6 +27,8 @@ public class Patient {
 	}
 
 	/**
+	 * Get the name of the patient.
+	 * 
 	 * @return the name
 	 */
 	public String getName() {
@@ -32,6 +36,8 @@ public class Patient {
 	}
 
 	/**
+	 * Get all symptoms of the patient.
+	 * 
 	 * @return the list of symptoms.
 	 */
 	public String[] getSymptoms() {
@@ -39,6 +45,8 @@ public class Patient {
 	}
 
 	/**
+	 * Get the ID of the patient.
+	 * 
 	 * @return the disease ID
 	 */
 	public int getID() {
@@ -46,6 +54,8 @@ public class Patient {
 	}
 
 	/**
+	 * Get the disease of the patient.
+	 * 
 	 * @return the disease
 	 */
 	public Disease getDisease() {
@@ -53,14 +63,18 @@ public class Patient {
 	}
 
 	/**
+	 * Set the disease for the patient.
+	 * 
 	 * @param d A disease object
-	 *          Set the disease of the patient
+	 * 
 	 */
 	public void setDisease(Disease d) {
 		this.disease = d;
 	}
 
 	/**
+	 * Check if the patient has been diagnosed yet.
+	 * 
 	 * @return true if the patient has been diagnosed
 	 */
 	public boolean hasBeenDiagnosed() {

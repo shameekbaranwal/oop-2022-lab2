@@ -13,6 +13,7 @@ public class Disease {
 	String[] symptoms;
 
 	/**
+	 * Constructor for the Disease class.
 	 * 
 	 * @param name            Name of the disease
 	 * @param treatment       Treatment for the disease
@@ -27,6 +28,7 @@ public class Disease {
 	}
 
 	/**
+	 * This method returns the name of the disease.
 	 * 
 	 * @return The name of the Disease;
 	 */
@@ -35,6 +37,7 @@ public class Disease {
 	}
 
 	/**
+	 * To get the treatment specified by the disease
 	 * 
 	 * @return The treatment specified for the disease.
 	 */
@@ -43,15 +46,16 @@ public class Disease {
 	}
 
 	/**
+	 * To check if the disease is communicable
 	 * 
-	 * @return true if the disease is infectious as specified by communicability
-	 *         else return false.
+	 * @return boolean
 	 */
 	public boolean isInfectious() {
 		return (this.communicability > 42);
 	}
 
 	/**
+	 * To check if a particular symptom matches that of the disease.
 	 * 
 	 * @param symptom The particular symptom we want to check with the disease
 	 * @return True if the symptom is in the list of symptoms of the disease.

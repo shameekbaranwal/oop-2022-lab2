@@ -10,6 +10,7 @@ public class Doctor {
 	String name;
 
 	/**
+	 * Constructor for the Doctor class.
 	 * 
 	 * @param name The name of the doctor.
 	 */
@@ -18,6 +19,8 @@ public class Doctor {
 	}
 
 	/**
+	 * Get the name of the Doctor.
+	 * 
 	 * @return the Name of the doctor object.
 	 */
 	public String getName() {
@@ -25,16 +28,15 @@ public class Doctor {
 	}
 
 	/**
+	 * This is the main diagnosis function. It takes in a patient and the
+	 * list of diseases that the
+	 * hospital object has, and determines the diagnostic report by
+	 * checking the maximum matching symptoms with any
+	 * disease.
 	 * 
 	 * @param p - A patient object which is to be diagnosed
 	 * @param d - The list of diseases that could potentially be the diagnosis.
-	 *          <br/>
-	 *          This is the main diagnosis function. It takes in a patient and the
-	 *          list of diseases that the
-	 *          hospital object has, and determines the diagnostic report by
-	 *          checking the maximum matching symptoms with any
-	 *          disease.
-	 *          <br/>
+	 * 
 	 * @return A Disease object that is the diagnosed disease based on symptoms
 	 */
 	public Disease differentialDiagnosis(Patient p, Disease[] d) {

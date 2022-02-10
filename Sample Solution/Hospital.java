@@ -23,6 +23,8 @@ public class Hospital {
 	}
 
 	/**
+	 * Get all patients of the hospital
+	 * 
 	 * @return All patients in the hospital.
 	 */
 	public Patient[] getPatients() {
@@ -30,6 +32,8 @@ public class Hospital {
 	}
 
 	/**
+	 * Get the number of patients in the hospital
+	 * 
 	 * @return Number of patients in the hospital.
 	 */
 	public int getNumPatients() {
@@ -37,6 +41,8 @@ public class Hospital {
 	}
 
 	/**
+	 * Get the number of diseases in the hospital.
+	 * 
 	 * @return Number of diseases in the hospital's list.
 	 */
 	public int getNumDiseases() {
@@ -44,6 +50,8 @@ public class Hospital {
 	}
 
 	/**
+	 * Get the list of diseases in the hospital.
+	 * 
 	 * @return All diseases in the list for diagnosis.
 	 */
 	public Disease[] getDiseases() {
@@ -51,13 +59,13 @@ public class Hospital {
 	}
 
 	/**
+	 * 
+	 * Adds a patient to the current patient list,
+	 * and increments the number of patients
+	 * 
 	 * @param name     The name of the patient,
 	 * @param category The category of admittance
 	 * @param symptoms The list of symptoms.
-	 * 
-	 *                 <br/>
-	 *                 Adds a patient to the current patient list,
-	 *                 and increments the number of patients
 	 */
 	public void addPatient(String name, int category, String[] symptoms) {
 		Patient p = new Patient(name, category, symptoms);
@@ -65,16 +73,15 @@ public class Hospital {
 	}
 
 	/**
+	 * 
+	 * This function adds a new Disease into the Hospital's
+	 * list, and increments the number of diseases.
+	 * 
 	 * @param name            The name of the disease.
 	 * @param treatment       The name of the treatment for the disease.
 	 * @param communicability An integer denoting how communicable the disease is.
 	 * @param symptoms        A list of Strings denoting the symptoms of the
 	 *                        disease.
-	 * 
-	 *                        <br/>
-	 *                        This function adds a new Disease into the Hospital's
-	 *                        list, and increments the number of diseases.
-	 * 
 	 */
 	public void addDisease(String name, String treatment, int communicability, String[] symptoms) {
 		Disease d = new Disease(name, treatment, communicability, symptoms);
@@ -82,14 +89,16 @@ public class Hospital {
 	}
 
 	/**
-	 * @param p A Patient object.
-	 * 			<br/>
-	 * 			The assignDoctor function receives a patient object and checks if its ID field is even or odd.
-	 * 			If ID is odd, then it returns a reference to the "House", else it returns a reference to the "Wilson" object.
 	 * 
+	 * The assignDoctor function receives a patient object and checks if
+	 * its ID field is even or odd.
+	 * If ID is odd, then it returns a reference to the "House", else it
+	 * returns a reference to the "Wilson" object.
+	 * 
+	 * @param p A Patient object.
 	 * @return The assigned Doctor's object reference.
 	 */
-	
+
 	public Doctor assignDoctor(Patient p) {
 		if (p.getID() % 2 == 1)
 			return House;
@@ -98,11 +107,11 @@ public class Hospital {
 	}
 
 	/**
+	 * 
+	 * The diagnose function assigns a doctor to the patient and then
+	 * returns what the diagnosed disease is.
+	 *
 	 * @param p A Patient object.
-	 *          <br/>
-	 *          The diagnose function assigns a doctor to the patient and then
-	 *          returns what the diagnosed disease is.
-	 *          <br/>
 	 * @return The Disease object.
 	 */
 	public void diagnose(Patient p) {
@@ -116,12 +125,11 @@ public class Hospital {
 	}
 
 	/**
-	 * @param p - A Patient object.
 	 * 
-	 *          <br/>
-	 *          The function returns the treatment specified for the disease the
-	 *          patient is diagnosed with.
-	 *          <br/>
+	 * The function returns the treatment specified for the disease the
+	 * patient is diagnosed with.
+	 * 
+	 * @param p - A Patient object.
 	 * @return The Treatment for the disease.
 	 */
 	public String treatment(Patient p) {
