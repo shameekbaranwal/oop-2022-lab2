@@ -7,8 +7,6 @@ public class Doctor {
 	String getName() {
 	}
 
-	int getSpecialization() {
-	}
 
 	Disease differentialDiagnosis(Patient p, Disease[] d) {
 	}
