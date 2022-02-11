@@ -22,6 +22,14 @@ class Hospital {
 	Disease[] getDiseases() {
 
 	}
+	
+	int getNumPatients() {
+		
+	}
+	
+	int getNumDiseases() {
+	
+	}
 
 	void addPatient(String name, int category, String[] symptoms) {
 
